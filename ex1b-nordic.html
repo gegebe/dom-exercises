@@ -466,7 +466,7 @@ Alternatively if you want to just have a single hero
         // Ejercicio 1
         // Selecciona el texto que hay en el único h1 de la página 
 
-        let titulo = document.querySelector("h1").textContent; // let titulo = document.querySelector(...)
+        let titulo = document.querySelector("h1").textContent; // let titulo = document.querySelector("h1")
         console.log('Titulo: ', titulo); // 'NORDICS'
 
         // Ejercicio 2
@@ -479,13 +479,13 @@ Alternatively if you want to just have a single hero
         // Selecciona el texto del primer item del menú de navegación
         // BONUS: NO modifiques el HTML para conseguirlo
 
-        let itemShop = document.querySelector("nav#header");
-        console.log('Primer item del menú: ', itemShop); // 'Shop'
+        let itemShop = document.querySelector("nav#header a.nosiemprenecesitasunidparaseleccionarunelementodelDOM");
+        console.log('Primer item del menú: ', itemShop.textContent); // 'Shop'
 
         // Ejercicio 4
         // Muestra el valor del atributo .src de la ima imagen identificada con el id="producto-1"
         let srcAtributo = document.querySelector("#producto-1");
-        console.log('El valor del atributo src de la primera imagen es: ', srcAtributo); // https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80
+        console.log('El valor del atributo src de la primera imagen es: ', srcAtributo.src); // https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80
 
 
         // Modificar el DOM. Estos ejercicios se centran en modificar el DOM. Es decir, debes ver los cambios en el HTML una vez se haya ejecutado la línea de código. Solo necesitas una línea de código para cada ejercicio
@@ -494,8 +494,12 @@ Alternatively if you want to just have a single hero
         // Ejercicio 5
         // MODIFICA el texto del segundo item de menu. En vez de 'About', deberíamos ver 'About US'
 
+        document.querySelector("#item-about").textContent = "About US";
+
         // Ejercicio 6
         // MODIFICA el texto del primer producto del carousel de fotos (ese cojín raro), y cambia el texto por cualquier otra cosa que describa para ti mejor ese cojín
+
+        document.querySelector("#cojin-raro").textContent = "Cojín pez";
 
         // Ejercicio 7
         // Modifica el color del fondo del <nav> al valor 'azure'
@@ -504,6 +508,8 @@ Alternatively if you want to just have a single hero
 
         // Ejercicio 8 (Difícil)
         // Cambia el valor de la propiedad .src de la segunda imagen por este otro https://i.ibb.co/j83Y290/fotogato.jpg
+        //https://i.insider.com/4e72ccfceab8ea2f01000002?width=1190
+        document.querySelector("#producto-2").src = "https://i.insider.com/4e72ccfceab8ea2f01000002?width=1190";
 
 
     </script>
